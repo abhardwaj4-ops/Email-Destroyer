@@ -1,53 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Email Destroyer — HTML5 Canvas</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Email Destroyer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Email Destroyer</h1>
-    <p class="sub">Upload an image (e.g., a screenshot of an email) and pick a tool to de-stress ✂️💥🔥</p>
-  </header>
-
-  <div class="toolbar">
-    <label class="file">
-      <input id="fileInput" type="file" accept="image/*" />
-      <span>Upload Image</span>
-    </label>
-
-    <div class="weapons">
-      <button class="weapon" data-weapon="gun" title="Gun">🔫 Gun</button>
-      <button class="weapon" data-weapon="knife" title="Knife">🔪 Knife</button>
-      <button class="weapon" data-weapon="machete" title="Machete">🪓 Machete</button>
-      <button class="weapon" data-weapon="flamethrower" title="Flamethrower">🔥 Flamethrower</button>
-      <button class="weapon" data-weapon="grenade" title="Grenade">💣 Grenade</button>
-    </div>
-
-    <div class="actions">
-      <button id="resetBtn">Reset</button>
-      <button id="saveBtn">Save Result</button>
-    </div>
-  </div>
-
-  <main>
-    <div id="dropZone">
-      <canvas id="game"></canvas>
-      <div id="hint">
-        <b>Drop an image here</b> or click <i>Upload Image</i> above.<br/>
-        Then choose a tool and click/drag on the image.
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <small>
-      Non-graphic, for cathartic fun only. Images are processed locally in your browser.
-    </small>
-  </footer>
-
+  <h1>Email Destroyer</h1>
+  <input type="file" id="upload" accept="image/*">
+  <select id="weapon">
+    <option value="gun">Gun</option>
+    <option value="knife">Knife</option>
+    <option value="machete">Machete</option>
+    <option value="flame">Flamethrower</option>
+    <option value="grenade">Grenade</option>
+  </select>
+  <canvas id="gameCanvas"></canvas>
   <script src="main.js"></script>
 </body>
 </html>
